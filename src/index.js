@@ -15,6 +15,7 @@ module.exports = {
   get FeatureHighlight() { return require('./components').FeatureHighlight; },
   get Hint() { return require('./components').Hint; },
   get Image() { return require('./components').Image; },
+  get Icon() { return require('./components').Icon; },
   get TextArea() { return require('./components').TextArea; },
   get TextField() { return require('./components').TextField; },
   get TextInput() { return require('./components').TextInput; },
