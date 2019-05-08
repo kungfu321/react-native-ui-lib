@@ -14,6 +14,7 @@ module.exports = {
   get FeatureHighlight() { return require('./featureHighlight').default; },
   get Hint() { return require('./hint').default; },
   get Image() { return require('./image').default; },
+  get Icon() { return require('./icon').default; },
 
   get TextArea() { return require('./inputs').TextArea; },
   get TextField() { return require('./inputs').TextField; },
