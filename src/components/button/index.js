@@ -220,7 +220,7 @@ export default class Button extends BaseComponent {
         return ThemeManager.CTADisabledColor;
       }
 
-      return propsBackgroundColor || stateBackgroundColor || themeBackgroundColor || Colors.blue30;
+      return propsBackgroundColor || stateBackgroundColor || themeBackgroundColor || Colors.blue10;
     }
     return 'transparent';
   }
@@ -237,9 +237,9 @@ export default class Button extends BaseComponent {
 
     let color = Colors.white;
     if (link) {
-      color = linkColor || Colors.blue30;
+      color = linkColor || Colors.blue10;
     } else if (outline) {
-      color = outlineColor || Colors.blue30;
+      color = outlineColor || Colors.blue10;
     } else if (this.isIconButton) {
       color = Colors.dark10;
     }
@@ -338,7 +338,7 @@ export default class Button extends BaseComponent {
     if ((outline || outlineColor) && !link) {
       outlineStyle = {
         borderWidth: outlineWidth || 1,
-        borderColor: outlineColor || Colors.blue30,
+        borderColor: outlineColor || Colors.blue10,
       };
 
       if (disabled) {
@@ -409,7 +409,7 @@ export default class Button extends BaseComponent {
   }
 
   renderIcon() {
-    const {iconSource} = this.props;
+    const {iconSource, icon} = this.props;
     
     if (iconSource) {
       const iconStyle = this.getIconStyle();
@@ -418,6 +418,10 @@ export default class Button extends BaseComponent {
       } else {
         return <Image source={iconSource} style={iconStyle}/>;
       }
+    }
+
+    if (icon) {
+      return <View style={{marginRight: 10}}>{icon}</View>;
     }
     return null;
   }
@@ -475,7 +479,7 @@ export default class Button extends BaseComponent {
         {...others}
         ref={this.setRef}
       >
-        <View row centerV>
+        <View row flex center>
           {this.props.children}
           {this.props.iconOnRight ? this.renderLabel() : this.renderIcon()}
           {this.props.iconOnRight ? this.renderIcon() : this.renderLabel()}
