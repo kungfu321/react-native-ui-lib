@@ -4,11 +4,11 @@ import Colors from './colors';
 class ThemeManager {
 
   theme = {
-    primaryColor: Colors.blue30,
+    primaryColor: Colors.blue10,
     CTA: {
       textColor: Colors.white,
       disabledColor: Colors.dark60,
-      backgroundColor: Colors.blue30,
+      backgroundColor: Colors.blue10,
     },
     titleColor: Colors.dark10,
     subtitleColor: Colors.dark40,
