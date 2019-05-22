@@ -8,7 +8,7 @@ const colorsPalette = {
   dark70: '#E0E3E5',
   dark80: '#F2F4F5',
   // BLUE,
-  blue10: '#3182C8',
+  blue10: '#4D72FA',
   blue20: '#4196E0',
   blue30: '#459FED',
   blue40: '#57a8ef',
