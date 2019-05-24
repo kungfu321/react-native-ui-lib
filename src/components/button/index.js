@@ -147,7 +147,8 @@ export default class Button extends BaseComponent {
   };
 
   static defaultProps = {
-    iconOnRight: false
+    iconOnRight: false,
+    centerLinkButton: false
   };
 
   static sizes = {
@@ -447,7 +448,7 @@ export default class Button extends BaseComponent {
   }
 
   render() {
-    const {onPress, disabled, link, style, containerStyle, testID, animateLayout, ...others} = this.getThemeProps();
+    const {onPress, disabled, link, style, containerStyle, centerLinkButton, testID, animateLayout, ...others} = this.getThemeProps();
     const shadowStyle = this.getShadowStyle();
     const {margins} = this.state;
     const backgroundColor = this.getBackgroundColor();
@@ -479,7 +480,7 @@ export default class Button extends BaseComponent {
         {...others}
         ref={this.setRef}
       >
-        <View row flex center>
+        <View row flex={centerLinkButton} center={centerLinkButton} centerV>
           {this.props.children}
           {this.props.iconOnRight ? this.renderLabel() : this.renderIcon()}
           {this.props.iconOnRight ? this.renderIcon() : this.renderLabel()}
